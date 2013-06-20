@@ -1,6 +1,6 @@
 # Spree Product Assembly
 
-[![Build Status](https://travis-ci.org/spree/spree-product-assembly.png?branch=travis)](https://travis-ci.org/spree/spree-product-assembly)
+[![Build Status](https://travis-ci.org/westonplatter/spree-product-assembly.png)](https://travis-ci.org/westonplatter/spree-product-assembly)
 
 Create a product which is composed of other products.
 
