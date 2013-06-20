@@ -8,11 +8,13 @@ describe "Parts", js: true do
 
   before do
     visit spree.admin_product_path(mug)
+    visit spree.admin_product_path(mug)
     check "product_can_be_part"
     click_on "Update"
   end
 
   it "add and remove parts" do
+    visit spree.admin_product_path(tshirt)
     visit spree.admin_product_path(tshirt)
     click_on "Parts"
     fill_in "searchtext", with: "Mug"
