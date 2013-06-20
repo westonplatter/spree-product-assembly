@@ -7,17 +7,16 @@ describe 'Parts', js: true do
     tshirt = FactoryGirl.create(:product, name: 'T-Shirt')
     mug = FactoryGirl.create(:product, name: 'Mug')
 
-    visit spree.admin_product_path(mug)
+    visit spree.admin_product_path(tshirt)
     check 'product_can_be_part'
     click_on 'Update'
 
-    visit spree.admin_product_path(tshirt)
+    visit spree.admin_product_path(mug)
     click_on 'Parts'
-    fill_in 'searchtext', with: 'Mug'
+    fill_in 'searchtext', with: 'T-Shirt'
 
     within('#search_hits') { click_on 'Select' }
-    page.should have_content(mug.sku)
-
+    page.should have_content(tshirt.sku)
 
     puts Spree::Variant.all.inspect
 
