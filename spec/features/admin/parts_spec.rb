@@ -18,6 +18,9 @@ describe 'Parts', js: true do
     within('#search_hits') { click_on 'Select' }
     page.should have_content(mug.sku)
 
+
+    puts Spree::Variant.all.inspect
+
     within('#product_parts') { click_on 'Remove' }
   end
 end
