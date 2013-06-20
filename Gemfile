@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
-gem 'spree', :github => "spree/spree"
+gem 'spree', github: 'spree/spree'
 gem 'pry-rails'
 
 group :assets do
