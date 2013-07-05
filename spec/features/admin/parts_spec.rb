@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Parts', js: true do
+describe 'Parts' do
   stub_authorization!
 
   it 'update, add, and remove parts' do
