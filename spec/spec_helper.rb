@@ -17,7 +17,10 @@ RSpec.configure do |config|
   config.color = true
   config.mock_with :rspec
 
-  config.use_transactional_fixtures = true
+  # Capybara javascript drivers require transactional fixtures set to false, and we use DatabaseCleaner
+  # to cleanup after each test instead.  Without transactional fixtures set to false the records created
+  # to setup a test will be unavailable to the browser, which runs under a seperate server instance.
+  config.use_transactional_fixtures = false
 
   config.include FactoryGirl::Syntax::Methods
 
